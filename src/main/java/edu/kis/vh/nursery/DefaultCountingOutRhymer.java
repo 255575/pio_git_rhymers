@@ -8,7 +8,7 @@ public class DefaultCountingOutRhymer {
     private static final int PEEKABOO_EMPTY = -1;
     private static final int COUNT_EMPTY = -1;
 
-    private int[] numbers = new int[NUMBERS_SIZE];
+    private final int[] numbers = new int[NUMBERS_SIZE];
 
     protected int total = EMPTY_ERROR;
 

@@ -10,7 +10,11 @@ public class DefaultCountingOutRhymer {
 
     private final int[] numbers = new int[NUMBERS_SIZE];
 
-    protected int total = EMPTY_ERROR;
+    private int total = EMPTY_ERROR;
+
+    public int getTotal() {
+        return total;
+    }
 
     public void countIn(int in) {
         if (!isFull())

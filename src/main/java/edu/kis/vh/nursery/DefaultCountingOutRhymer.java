@@ -1,5 +1,8 @@
 package edu.kis.vh.nursery;
 
+/**
+ * Klasa reprezentująca domyślną wyliczankę działającą w oparciu o stos (LIFO).
+ */
 public class DefaultCountingOutRhymer {
 
     private static final int NUMBERS_SIZE = 12;
@@ -16,6 +19,11 @@ public class DefaultCountingOutRhymer {
         return total;
     }
 
+    /**
+     * Dodaje nową wartość do wyliczanki.
+     *
+     * @param in wartość do dodania
+     */
     public void countIn(int in) {
         if (!isFull())
             numbers[++total] = in;
@@ -29,12 +37,22 @@ public class DefaultCountingOutRhymer {
         return total == FULL_CONST;
     }
 
+    /**
+     * Zwraca ostatnią wartość z wyliczanki bez jej usuwania.
+     *
+     * @return ostatnia wartość lub EMPTY jeśli struktura jest pusta
+     */
     protected int peekaboo() {
         if (isEmpty())
             return PEEKABOO_EMPTY;
         return numbers[total];
     }
 
+    /**
+     * Zwraca i usuwa ostatnią wartość z wyliczanki.
+     *
+     * @return usunięta wartość lub EMPTY jeśli struktura jest pusta
+     */
     public int countOut() {
         if (isEmpty())
             return COUNT_EMPTY;

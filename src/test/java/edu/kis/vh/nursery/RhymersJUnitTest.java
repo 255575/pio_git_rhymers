@@ -1,5 +1,7 @@
 package edu.kis.vh.nursery;
 
+// Projekt działa poprawnie – testy przechodzą
+
 import org.junit.Assert;
 import org.junit.Test;
 
